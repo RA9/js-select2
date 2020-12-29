@@ -112,6 +112,7 @@
     const selectLabelEl = cel("div");
     const selectWrapperEl = cel("div");
     const selectListsEl = cel("div");
+    const selectListsOptionsEl = cel("div");
     const options = createOptionsEl();
 
     // Add classes to an element
@@ -124,6 +125,11 @@
     mainWrapperEl.appendChild(selectLabelEl);
     mainWrapperEl.appendChild(selectWrapperEl);
 
+    for (const option of options) {
+      selectListsOptionsEl.appendChild(option);
+    }
+
+    selectListsEl.appendChild(selectListsOptionsEl);
   }
 
   /**
